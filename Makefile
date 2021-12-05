@@ -11,4 +11,4 @@ solution:
 	tar -cf $(SOLUTION_TARGET) $(SOLUTION_FILES)
 
 clean:
-	-rm -f $(SOLUTION_TARGET)
+	rm -f $(SOLUTION_TARGET)
