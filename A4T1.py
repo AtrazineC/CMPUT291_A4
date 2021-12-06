@@ -2,9 +2,6 @@ from bson.json_util import loads
 from pymongo import MongoClient
 
 client = MongoClient('mongodb://localhost:27017')
-# Connect to the default port on localhost for the mongodb server.
-# client = MongoClient()
-
 
 # Create or open the video_store database on server.
 db = client["A4dbNorm"]

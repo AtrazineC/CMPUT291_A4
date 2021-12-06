@@ -2,9 +2,6 @@ from bson.json_util import loads
 from pymongo import MongoClient
 
 client = MongoClient('mongodb://localhost:27017')
-# Connect to the default port on localhost for the mongodb server.
-# client = MongoClient()
-
 
 # Create or open the video_store database on server.
 db = client["A4dbEmbed"]
@@ -45,12 +42,20 @@ print(ret.inserted_ids)
 
 artist_collection.update_many(
     {},
-    {'$rename': {'tracks': 'trackids'}},
+    {
+        '$rename': {
+            'tracks': 'trackids'
+        }
+    },
 )
 
 artist_collection.update_many(
     {},
-    {'$set': {'tracks': []}},
+    {
+        '$set': {
+            'tracks': []
+        }
+    },
 )
 
 for x in range(1569):
@@ -60,15 +65,24 @@ for x in range(1569):
     print(track_collection.count_documents({}))
 
     artist_collection.update_many(
-        {'trackids': track.get("track_id")},
-        {'$push': {'tracks': track}},
+        {
+            'trackids': track.get("track_id")
+        },
+        {
+            '$push': {
+                'tracks': track
+            }
+        },
         upsert=True
     )
 
 artist_collection.update_many(
     {},
-    {'$unset': {'trackids': ""}}
+    {
+        '$unset': {
+            'trackids': ""
+        }
+    }
 )
 
-# artist_collection.rename('ArtistsTracks')
 track_collection.drop()
