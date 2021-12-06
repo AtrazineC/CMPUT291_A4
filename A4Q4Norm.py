@@ -30,6 +30,7 @@ out = track_collection.aggregate([
     },
     {
         '$project': {
+            '_id': '$ArtistsNames._id',
             'name': '$ArtistsNames.name',
             't_name': '$name',
             't_release_date': '$release_date'
