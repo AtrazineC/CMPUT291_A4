@@ -1,8 +1,8 @@
 # Group 37
-- Lora Ma (lora)                - 25%
-- Benjamin Kong (bkong)         - 25%
-- Jordan Rusk (rusk)            - 25%
-- Sean Rutherford (swruther)    - 25%
+- Lora Ma (lora)                - 22%
+- Benjamin Kong (bkong)         - 22%
+- Jordan Rusk (rusk)            - 22%
+- Sean Rutherford (swruther)    - 34%
 
 We declare that we did not collaborate with anyone outside our own group in this assignment.
 

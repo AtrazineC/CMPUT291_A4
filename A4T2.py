@@ -58,11 +58,8 @@ artist_collection.update_many(
     },
 )
 
-for x in range(1569):
+for _ in range(track_collection.count_documents({})):
     track = track_collection.find_one_and_delete({})
-    print(track)
-
-    print(track_collection.count_documents({}))
 
     artist_collection.update_many(
         {
