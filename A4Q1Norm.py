@@ -3,7 +3,6 @@ from pymongo import MongoClient
 client = MongoClient('mongodb://localhost:27017')
 db = client["A4dbNorm"]
 artist_collection = db["Artists"]
-track_collection = db["Tracks"]
 
 out = artist_collection.aggregate([
     {
