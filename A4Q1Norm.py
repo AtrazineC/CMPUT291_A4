@@ -8,10 +8,9 @@ track_collection = db["Tracks"]
 out = artist_collection.aggregate([
     {
         '$project': {
-            'num_tracks':
-                {
-                    '$size': "$tracks"
-                },
+            'num_tracks': {
+                '$size': "$tracks"
+            },
             'artist_id': 1,
             'name': 1
         }
